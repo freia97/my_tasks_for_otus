@@ -11,7 +11,6 @@ def power_numbers(*args):
        <<< [1, 4, 25, 49]
        """
     res = [x ** 2 for x in args]
-    print(res)
     return res
 
 
@@ -29,7 +28,6 @@ def prime(n):
         if all(num % i != 0 for i in range(2, num)):
             res.append(num)
     res.remove(1)
-    print(res)
     return res
 
 
@@ -37,13 +35,11 @@ def prime(n):
 
 def odd(lst):
     res = [x for x in lst if x % 2 != 0]
-    print(res)
     return res
 
 
 def even(lst):
     res = [x for x in lst if x % 2 == 0]
-    print(res)
     return res
 
 
