@@ -2,7 +2,7 @@
 Домашнее задание №1
 Функции и структуры данных
 """
-
+from math import ceil
 
 def power_numbers(*args):
     """
@@ -22,13 +22,19 @@ EVEN = "even"
 PRIME = "prime"
 
 
-def prime(n):
-    res = []
-    for num in n:
-        if all(num % i != 0 for i in range(2, num)):
-            res.append(num)
-    res.remove(1)
-    return res
+def prime(lst):
+    primes = []
+    for i in lst:
+        if i == 1:
+            continue
+        for j in range(2, int(i ** 0.5) + 1):
+            if i % j == 0:
+                break
+        else:
+            primes.append(i)
+    print(primes)
+    return primes
+
 
 
 
