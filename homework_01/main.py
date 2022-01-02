@@ -25,7 +25,7 @@ PRIME = "prime"
 def prime(lst):
     primes = []
     for i in lst:
-        if i == 1:
+        if i < 2:
             continue
         for j in range(2, int(i ** 0.5) + 1):
             if i % j == 0:
